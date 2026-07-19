@@ -5,4 +5,5 @@ dist/
 *.bak
 *.log
 *_log.txt
-d1_*.txt 
+d1_*.txt
+scripts/import_preview.sql 

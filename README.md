@@ -43,6 +43,21 @@ npx wrangler dev --remote --port 8787
 bash
 curl http://127.0.0.1:8787/health
 # 返回 {"status":"ok"}
+
+🔄 知识库同步（Obsidian → D1）
+
+在 Obsidian 知识库新增/修改笔记后，一条命令同步到线上：
+
+```bash
+python scripts/import.py            # 全量同步（幂等：清库重灌，自动分批）
+python scripts/import.py --dry-run  # 只解析+统计，生成 import_preview.sql 不写库
+```
+
+- 知识库路径：默认脚本内 `DEFAULT_VAULT`，可用 `--vault "路径"` 或环境变量 `HOLOSOPHY_VAULT` 覆盖
+- **分类自动发现**：vault 根目录下新增含 .md 的目录即成为新分类（copilot / .obsidian 等已排除），知识库可以不断生长
+- frontmatter 的 `title` / `tags` / `摘要` 与正文 `[[wikilink]]` 双链都会被解析入库；重名笔记自动去重并提示
+- 依赖：仅 Python 3.8+ 标准库；wrangler 自动定位（仓库 node_modules 优先）
+
 📚 API 端点
 端点	方法	说明
 /health	GET	健康检查
