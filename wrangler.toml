@@ -1,0 +1,11 @@
+name = "holosophy-mcp"
+main = "dist/index.js"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+[[d1_databases]]
+binding = "DB"
+database_id = "cb0c3816-05fc-47a1-a704-dd67d76f43b8"
+
+[vars]
+ENVIRONMENT = "production"
