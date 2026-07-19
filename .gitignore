@@ -1,4 +1,8 @@
 node_modules/ 
 .wrangler/ 
 .env 
-dist/ 
+dist/
+*.bak
+*.log
+*_log.txt
+d1_*.txt 

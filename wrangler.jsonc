@@ -12,5 +12,8 @@
   ],
   "vars": {
     "ENVIRONMENT": "production"
-  }
+  },
+  "routes": [
+    { "pattern": "mcp.eastastar.com", "custom_domain": true }
+  ]
 }

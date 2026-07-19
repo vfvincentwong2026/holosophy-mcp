@@ -15,6 +15,16 @@ holosophy-mcp	接口层	将知识转化为 API，机器可读、AI 可调用
 EAHub	展示层	知识图谱的可视化前端界面
 三者构成完整闭环：知识沉淀 → API 服务 → 交互呈现
 
+🌐 线上服务
+
+| 组件 | 地址 |
+|------|------|
+| API 服务 | https://mcp.eastastar.com |
+| 展示前端 | https://hub.eastastar.com |
+| 前端仓库 | https://github.com/vfvincentwong2026/eahub |
+
+数据：Cloudflare D1（`concepts` 70 条 / `relationships` 899 条，由 holosophy Obsidian 知识库导入），CORS 已全开，任意前端可直接调用。
+
 🧠 核心能力
 语义检索：基于自然语言的跨域知识搜索
 
